@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50,
-                backgroundImage: AssetImage('assets/images/logo.png'), // Add your logo path here
+                backgroundImage: AssetImage('assets/logo.png',), // Add your logo path here
               ),
               SizedBox(height: 20),
               Text(

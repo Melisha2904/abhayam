@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "704124013106",
+    "project_id": "abhayam-iej12s",
+    "storage_bucket": "abhayam-iej12s.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704124013106:android:32abf1a26469820d2c4a2b",
+        "android_client_info": {
+          "package_name": "com.example.abhayam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjCRzfPELEtkyunaBTQp45Vl502Csclp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

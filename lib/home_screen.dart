@@ -1,7 +1,14 @@
+import 'package:abhayam/splash_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   Future<void> sendSOS() async {
     // List of phone numbers
     List<String> phoneNumbers = [
@@ -25,10 +32,21 @@ class HomeScreen extends StatelessWidget {
     }
   }
 
+  void _logout() async {
+    await FirebaseAuth.instance.signOut(); // Sign out the user
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => SplashScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: _logout,
+              icon: Icon(Icons.logout)),
+        ],
         title: Text('Abhayam'),
         backgroundColor: Colors.deepPurple,
         elevation: 0,
